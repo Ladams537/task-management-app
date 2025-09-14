@@ -6,7 +6,8 @@ import { Server } from 'socket.io';
 import 'dotenv/config';
 
 // Import the router for board-related endpoints
-import boardRoutes from './routes/boards.js';
+import dashboardRoutes from './routes/dashoard.js';
+import boardRoutes from './routes/board.js';
 import { query } from './db/index.js';
 
 
@@ -40,7 +41,8 @@ app.use((req, res, next) => {
 
 
 // --- Routes ---
-app.use('/api/boards', boardRoutes);
+app.use('/api/dashboard', dashboardRoutes);
+app.use('/api/board', boardRoutes);
 
 app.get('/', (req, res) => {
     res.json({ message: 'Welcome to the Task Management API!' });

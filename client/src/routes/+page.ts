@@ -16,7 +16,7 @@ export const load = async ({ fetch }: { fetch: typeof globalThis.fetch }) => {
     try {
         // We call our backend API endpoint.
         // SvelteKit's `fetch` is smart; it can make this call directly on the server.
-        const response = await fetch('http://localhost:3000/api/boards');
+        const response = await fetch('http://localhost:3000/api/dashboard');
 
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
