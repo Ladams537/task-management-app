@@ -8,6 +8,7 @@ import 'dotenv/config';
 // Import the router for board-related endpoints
 import dashboardRoutes from './routes/dashoard.js';
 import boardRoutes from './routes/board.js';
+import taskRoutes from './routes/task.js';
 import { query } from './db/index.js';
 
 
@@ -42,7 +43,8 @@ app.use((req, res, next) => {
 
 // --- Routes ---
 app.use('/api/dashboard', dashboardRoutes);
-app.use('/api/board', boardRoutes);
+app.use('/api/board/:boardId', boardRoutes);
+app.use('/api/list/:listId', taskRoutes);
 
 app.get('/', (req, res) => {
     res.json({ message: 'Welcome to the Task Management API!' });

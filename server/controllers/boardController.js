@@ -1,6 +1,6 @@
 import { query } from '../db/index.js';
 
-// GET /api/boards/:boardId/lists
+// GET /api/boards/:boardId
 // Get all lists for a specific board
 export const getAllLists = async (req, res) => {
     try {
@@ -17,7 +17,7 @@ export const getAllLists = async (req, res) => {
     }
 };
 
-// POST /api/boards/:boardId/lists
+// POST /api/boards/:boardId
 // Create a new list for a specific board
 export const createList = async (req, res) => {
     try {
