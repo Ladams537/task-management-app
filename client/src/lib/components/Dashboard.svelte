@@ -2,8 +2,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { io, type Socket } from 'socket.io-client';
-	import BoardForm from './dashboard/BoardForm.svelte';
-	import BoardCard from './dashboard/BoardCard.svelte';
+	import BoardForm from './dashboard/Form.svelte';
+	import BoardCard from './dashboard/Card.svelte';
 
 	// Type definitions
 	type Board = { id: number; name: string; description?: string };
